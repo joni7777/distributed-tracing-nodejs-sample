@@ -1,15 +1,12 @@
 import { Sequelize } from 'sequelize'
+
 import UserTable from './users.model'
 import OrdersTable from './orders.model'
-let db: any = new Object()
+
+let db: any = {}
+
 const initializeDB = (cb) => {
   const sequelize = new Sequelize('signoz', 'root', '', {
-    dialectOptions: {
-      ssl: {
-        require: false,
-        rejectUnauthorized: false,
-      },
-    },
     host: '127.0.0.1',
     port: 3306,
     dialect: 'mysql',

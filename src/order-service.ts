@@ -1,5 +1,5 @@
 import init from './tracer'
-const { sdk } = init('order-service')
+init('order-service')
 import 'dotenv/config'
 import * as api from '@opentelemetry/api'
 import axios from 'axios'

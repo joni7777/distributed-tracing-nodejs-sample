@@ -1,5 +1,5 @@
 import init from './tracer'
-const { sdk } = init('payment-service')
+init('payment-service')
 import 'dotenv/config'
 import * as api from '@opentelemetry/api'
 import axios from 'axios'

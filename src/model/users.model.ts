@@ -1,4 +1,5 @@
 import { DataTypes } from 'sequelize'
+
 const UserTable = (sequelize) => {
   const UsersTable = sequelize.define(
     'USERS',

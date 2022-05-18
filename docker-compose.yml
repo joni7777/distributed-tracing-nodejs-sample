@@ -1,0 +1,10 @@
+version: "3"
+services:
+  db:
+    environment:
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_DATABASE=signoz
+    image: mysql:5.7.20
+    ports:
+      - "0.0.0.0:3306:3306"

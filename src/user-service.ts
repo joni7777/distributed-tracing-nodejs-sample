@@ -1,12 +1,11 @@
 import init from './tracer'
-const { sdk } = init('user-service')
+init('user-service')
+
 import 'dotenv/config'
 import * as api from '@opentelemetry/api'
 import * as express from 'express'
 import { db, initializeDB } from './model'
 import * as cors from 'cors'
-
-const app = express()
 
 initializeDB((mysql: any) => {
   console.log('db initialized')
